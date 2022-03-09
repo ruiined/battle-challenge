@@ -12,8 +12,10 @@ class Battle < Sinatra::Base
     "Hello Battle!"
   end
 
+  get '/name_form' do
+    erb :name_form
+  end
 
-  
   # dont delete this
   run! if app_file == $0
 end
