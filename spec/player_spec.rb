@@ -9,7 +9,4 @@ describe Player do
   it "has health" do
     expect(noob.health).to eq(50)
   end
-  it "health is reduced after an attack" do
-    expect { pro_gamer.attack(noob) }.to change { noob.health }.by(-10)
-  end
 end
