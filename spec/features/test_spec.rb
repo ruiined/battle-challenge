@@ -1,7 +1,7 @@
 feature 'test' do
   scenario 'get a player name' do
     visit('/')
-    expect(page).to have_field 'player_1'
+    expect(page).to have_field 'player_1_name'
   end
 
   scenario 'submits the form' do

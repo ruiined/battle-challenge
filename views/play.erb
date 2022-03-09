@@ -1,6 +1,6 @@
-<h2> <%= @player_1.name %> vs <%= @player_2.name %> </h2>
-<h4> <%= @player_1.name %> has <%= @player_1.health %> health remaining </h4>
-<h4> <%= @player_2.name %> has <%= @player_2.health %> health remaining </h4>
+<h2> <%= @game.player_1.name %> vs <%= @game.player_2.name %> </h2>
+<h4> <%= @game.player_1.name %> has <%= @game.player_1.health %> health remaining </h4>
+<h4> <%= @game.player_2.name %> has <%= @game.player_2.health %> health remaining </h4>
 <form action="/attack">
   <input type="submit" value="Attack">
 </form>
