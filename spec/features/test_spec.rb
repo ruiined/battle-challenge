@@ -19,4 +19,10 @@ feature 'test' do
     click_button('Attack')
     expect(page).to have_content('Pro Gamer attacked Noob')
   end
+
+	scenario 'attack on player 2 reduces their hp by 10' do
+		sign_in_and_play
+		click_button('Attack')
+		expect(page).to have_content('Noob has 40 health remaining')
+	end
 end
