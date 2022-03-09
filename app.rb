@@ -6,14 +6,12 @@ class Battle < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  # Add routes here
-
   get '/' do
-    "Hello Battle!"
+    erb :index
   end
 
-  get '/name_form' do
-    erb :name_form
+  post '/names' do
+    erb :names
   end
 
   # dont delete this
