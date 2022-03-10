@@ -25,18 +25,18 @@ class Battle < Sinatra::Base
 
   get '/play' do 
     @game = $game
-    if @game.in_progress == false
-      redirect '/game-over'
-    end
+    # if @game.in_progress == false
+    #   redirect '/game-over'
+    # end
     erb :play
   end
 
   get '/attack' do
     @game = $game
     @game.attack
-    # if @game.in_progress == false
-    #   redirect '/game-over'
-    # end
+    if @game.in_progress == false
+      redirect '/game-over'
+    end
     erb :attack
   end
 

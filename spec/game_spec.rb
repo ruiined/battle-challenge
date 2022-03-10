@@ -2,8 +2,8 @@ require 'game'
 
 describe Game do
   let(:game) { described_class.new(pro_gamer, noob) }
-  let(:noob) { double :noob, receive_damage: true }
-  let(:pro_gamer) { double :pro_gamer, receive_damage: true}
+  let(:noob) { double :noob, receive_damage: true, alive: true }
+  let(:pro_gamer) { double :pro_gamer, receive_damage: true, alive: true}
 
   it "takes two players as parameters" do
     expect { game }.to_not raise_error
