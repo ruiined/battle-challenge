@@ -1,7 +1,7 @@
 <h2> <%= @game.current_player.name %> vs <%= @game.opposing_player.name %> </h2>
+<h3> It is <%= @game.current_player.name %>'s turn</h3>
 <h4> <%= @game.current_player.name %> has <%= @game.current_player.health %> health remaining </h4>
 <h4> <%= @game.opposing_player.name %> has <%= @game.opposing_player.health %> health remaining </h4>
-<h5> It is <%= @game.current_player.name %>'s turn</h5>
 <form action="/attack">
   <input type="submit" value="Attack">
 </form>
