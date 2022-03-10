@@ -25,12 +25,18 @@ class Battle < Sinatra::Base
 
   get '/play' do 
     @game = $game
+    if @game.in_progress == false
+      redirect '/game-over'
+    end
     erb :play
   end
 
   get '/attack' do
     @game = $game
     @game.attack
+    # if @game.in_progress == false
+    #   redirect '/game-over'
+    # end
     erb :attack
   end
 
@@ -38,6 +44,10 @@ class Battle < Sinatra::Base
     redirect '/play'
   end
 
+  get '/game-over' do
+    @game = $game
+    erb :game_over
+  end
   # dont delete this
   run! if app_file == $0
 end

@@ -1,0 +1,6 @@
+<h4><%= @game.current_player.name %> attacked <%= @game.opposing_player.name %></h4>
+<h5><%= @game.opposing_player.name %> has <%= @game.opposing_player.health %> health remaining</h5>
+<h5><%= @game.current_player.name %> is victorious</h5>
+<form action="/">
+  <input type="submit" value="Play Again">
+</form>

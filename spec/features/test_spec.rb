@@ -37,4 +37,12 @@ feature 'test' do
     click_button('Go Back')
     expect(page).to have_content("It is Noob's turn")
   end
+
+
+  scenario "player 2 loses and confirmation of loss appears" do
+    sign_in_and_play
+    8.times { attack }
+    click_button('Attack')
+    expect(page).to have_content("Pro Gamer is victorious")
+  end
 end
