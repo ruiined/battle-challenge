@@ -14,6 +14,11 @@ feature 'test' do
     expect(page).to have_content('Noob has 50 health remaining')
   end
 
+  scenario "shows whose turn it is" do
+    sign_in_and_play
+    expect(page).to have_content("It is Pro Gamer's turn")
+  end
+
   scenario 'attack player 2 and get a confirmation' do
     sign_in_and_play
     click_button('Attack')
@@ -25,4 +30,11 @@ feature 'test' do
 		click_button('Attack')
 		expect(page).to have_content('Noob has 40 health remaining')
 	end
+
+  scenario "switches turns" do
+    sign_in_and_play
+    click_button('Attack')
+    click_button('Go Back')
+    expect(page).to have_content("It is Noob's turn")
+  end
 end
